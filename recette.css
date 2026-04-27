@@ -1,0 +1,177 @@
+header {
+    
+  font-family: comic sans ms;
+  font-size: 0.75rem;
+  border-radius: 3rem;
+  background: #333433; color: rgb(255, 255, 255);
+  color: white;
+  display: flex;           /* Flexbox : enfants côte à côte */
+  justify-content:space-around ;  /* espace entre h1 et nav */
+  align-items:center ;     /* alignement vertical centré */
+  position: sticky;        /* reste en haut lors du scroll */
+  top: 0;
+  z-index: 100;     /**/                                                                                               
+}
+
+
+.textarea {background: #2c2c43; font-size: 0.65cm;font-family: comic sans ms;margin: 1cm 1cm;
+           padding-left: 1cm;
+           padding-right: 1cm;
+           border-radius: 3rem;
+           color: white;
+           width: 25cm;
+           height: 12cm;  
+           box-shadow: 0 0 17px 8px rgb(0, 0, 0)     
+}
+.textarea:hover{  box-shadow: 0 0 17px 8px rgb(197, 174, 0);
+                 transform: scale(1.07);border-bottom: 8px solid #6b5f14;
+                 }
+
+
+.image_koki{
+              border-radius: 3cm;
+              width: 13cm;
+              box-shadow: 0 0 17px 8px rgb(0, 0, 0) }
+.image_koki:hover{transform: scale(1.07);
+                   box-shadow: 0 0 17px 8px rgb(197, 174, 0)
+}
+
+
+
+.presentation{margin-top: 0.5cm; /* creer l'ecart du haut */
+               padding: 0.5cm;
+              display: flex;           /* Flexbox : enfants côte à côte */
+              justify-content:center ;  /* centre les elements */
+              align-items:center ;  
+              background-color: #c5c3c3;color: rgb(255, 255, 255);
+              border-radius: 3cm;
+              border-top: 13px solid #ffdd00;
+              box-shadow: 0 0 50px 8px rgb(134, 118, 1);
+              animation: borders 4s infinite alternate;}
+@keyframes borders {    15% { box-shadow: 0 0 50px 8px rgb(115, 102, 0);}
+                        50% { box-shadow: 0 0 50px 8px rgb(232, 226, 177);}
+                        100% { box-shadow: 0 0 50px 8px rgb(255, 225, 0);} 
+                        0%{background-color: #354735; }
+                        50%{background-color: #333433; }
+                        100%{background-color: #61560c; }
+
+}
+
+
+h2{font-size: 1.2cm; 
+   display: flex; color: rgb(255, 255, 255);
+   justify-content: center;
+   border-top-left-radius: 3cm;
+   border-top-right-radius: 3cm;
+   border-top: 13px solid #ffdd00;
+   font-family: comic sans ms;}
+
+h3{font-size: 0.7cm; padding-top: 0.5cm;
+   display: flex; color: rgb(255, 255, 255);
+   justify-content: center;
+   border-top-left-radius: 3cm;
+   border-top-right-radius: 3cm;
+   border-top: 13px solid #ffdd00;
+   font-family: comic sans ms;}
+
+.ingre-section{ display: flex ; justify-content: space-around;
+
+}
+.ingredient{   
+              display:grid;  
+              justify-content:space-evenly;      /*centre horizontalement*/               
+}
+
+
+.box{width: 0.5cm;
+    height: 0.5cm; }
+
+.form{border-bottom: 5px solid #a48f00;
+      font-family: comic sans ms;
+      font-size: 20px; color: rgb(255, 255, 255);
+
+}
+button{border-bottom: 5px solid #a48f00;
+      font-family: comic sans ms;
+      background-color: #ffffff;
+      font-size: 0.70cm;
+      border-radius: 3cm;
+      margin-top: 2cm;
+}
+button:hover{transform: scale(1.07);
+             box-shadow: 0 0 17px 8px rgb(197, 174, 0) 
+   
+}
+/* Style normal */
+label {
+    color: white; /* couleur par défaut */
+}
+
+/* Style appliqué quand la case est cochée */
+.checked {
+    color: yellow;              /* texte devient vert */
+    text-decoration: line-through; /* texte barré */
+}
+
+/* Appliquer Comic Sans MS à toute la page */
+body {color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+/* Appliquer Comic Sans MS uniquement à la section préparation */
+#preparation { 
+    display: grid;
+    justify-content: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;       /* taille du texte, ajustable */
+    line-height: 1.6;      /* espace entre les lignes pour plus de lisibilité */
+    color: white;          /* couleur du texte, tu peux changer si besoin */
+    background-color: rgba(36, 36, 36, 0.3); /* léger fond pour mettre en valeur */
+    padding: 1cm;          /* espace intérieur */
+    border-radius: 10cm;    /* coins arrondis */
+    box-shadow: 0 0 17px 8px rgb(166, 156, 66)   
+}
+#liste-membres{box-shadow: 0 0 17px 8px rgb(166, 156, 66)   
+
+}
+
+
+
+/* ── FOOTER ─────────────────────────────────────────── */
+footer {border-radius: 3cm;
+  text-align: center;
+  padding: 1.5rem;
+  background:  #3f3f3f;
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+
+@media (max-width: 1026px) {  
+  .image_koki{width: 70%; 
+              margin-bottom: 1cm;
+              
+              }
+  .textarea{width: 70%;
+            font-size: 16px;
+            height: 10cm;  
+          }
+  .presentation{display: flex;
+                flex-direction: column;
+                } 
+   h2{font-size: 1cm} h3{font-size: 30px}
+  .ingre-section{display: flex;
+                flex-direction: column;
+}
+.box{width: 0.5cm;
+    height: 0.5cm; }
+.form{font-size: 16px;}
+button{margin-right:  2cm; font-size: 0.5cm;}
+footer{font-size: 0.2cm;}
+header{
+    font-size: 0.2cm;
+}
+}
+
+
+  
+  

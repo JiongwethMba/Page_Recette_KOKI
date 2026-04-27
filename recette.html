@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recette</title>
+  <link rel="stylesheet" href="recette.css">
+</head>
+<body>
+
+<header>
+    <h1>Es-ce que vous connaissez le koki ?</h1>
+</header>
+
+<main style="background-color: rgb(55, 55, 55);border-radius: 3cm; padding-bottom: 4cm;">
+    <section>
+        <h2>Présentation</h2>
+        <div id="presentation" class="presentation">
+            <!-- ⚠️ Chemin absolu corrigé en chemin relatif -->
+            <img src="koki.jpg" class="image_koki" alt="koki">
+            <textarea readonly id="koki_def" class="textarea">
+
+            Le koki est un véritable trésor de la cuisine traditionnelle du Cameroun, apprécié pour sa richesse, sa douceur et son gout authentique. Préparé a base de haricots soigneusement écrasé puis mélangés avec de l'huile rouge, il est ensuite enveloppé dans des feuilles naturelles avant d'être cuit a la vapeur.
+            A l'ouverture, le parfum qui s'en dégage met immédiatement l'eau a la bouche.
+            Sa texture tendre et fondante se marie parfaitement des bananes plantain mures, du manioc ou du macabo. Chaque bouchée offre un mélange savoureux entre tradition, générosité et plaisir gourmand.
+            Le Koki n'est pas seulement un plat: c'est une invitation au partage, aux repas en famille et aux saveurs chaleureuses de l'Afrique.
+            </textarea>
+        </div>
+    </section>
+
+    <section id="ingredient" style="margin-top: 3cm;" class="ingre-section">
+        <form id="form-ingredient" class="ingredient">
+            <h3>liste des ingrédients</h3>
+            <div class="form">
+                <label for="haricot">
+                    <input type="checkbox" id="haricot" name="haricot" value="haricot" class="box" required> haricot blanc ou niébé
+                </label>
+            </div>
+            <br>
+            <div class="form">
+                <label for="sel">
+                    <input type="checkbox" id="sel" name="sel" value="sel" class="box" required> sel
+                </label>
+            </div>
+            <br>
+              <div class="form">
+                <label for="huile">
+                    <input type="checkbox" id="huile" name="huile" value="huile de palme" class="box" required> huile de palme
+                </label>
+            </div>
+            <br>
+            <div class="form">
+                <label for="piment">
+                    <input type="checkbox" id="piment" name="piment" value="piment" class="box"> Piment (facultatif)
+                </label>
+            </div>
+            <br>
+            <div class="form">
+                <label for="eau">
+                    <input type="checkbox" id="eau" name="eau" value="eau" class="box" required> Eau
+                </label>
+            </div>
+            <br>
+            <div class="form">
+                <label for="feuille">
+                    <input type="checkbox" id="feuille" name="feuille" value="feuille de bananier" class="box" required> Feuille de bananier
+                </label>
+            </div>
+        </form>
+
+        <form class="ingrdients" id="form-accompagnements">
+            <h3>Accompagnements</h3>
+            <div class="form">
+                <label for="banane">
+                    <input type="checkbox" id="banane" name="banane plantain" value="banane plantain" class="box"> Banane plantain
+                </label>
+            </div>
+            <br>
+            <div class="form">
+                <label for="macabo">
+                    <input type="checkbox" id="macabo" name="macabo" value="macabo" class="box"> macabo
+                </label>
+            </div>
+            <br>
+            <div class="form">
+                <label for="manioc">
+                    <input type="checkbox" id="manioc" name="manioc" value="manioc" class="box"> manioc
+                </label>
+            </div>
+
+            <!-- ⚠️ Correction de l'attribut onclick -->
+            <button type="submit" onclick="recette()">étape suivante</button>
+            <button id="btn-liste">liste des membres</button>
+        </form>
+    </section>
+</main>
+
+  <footer>
+    <p>EGCIM — Département de robotique — 2025–2026</p>
+  </footer>
+
+<script src="recette.js"></script>
+</body>
+</html>
